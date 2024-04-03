@@ -83,9 +83,7 @@ exports.register = asyncHandler(async (req, res, next) => {
     };
     
     const response=await axios(config)
-    const {jwt_token}=response.data
-    console.log(jwt_token)
-    
+    const {jwt_token}=response.data    
 
     res.status(200).json({message:"login successful",jwt_token}) 
 
